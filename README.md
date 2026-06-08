@@ -1,14 +1,14 @@
 <div align="center">
-  <p><b>Causal Inference for trustworthy AI, — 2025/2026</b></p>
+  <p><b>Causal Inference for trustworthy AI, CEA — 2025/2026</b></p>
   <hr>
 </div>
 
 <br />
 
 <p align="center">
-  <img src="images/LogoCS.png" height="120" alt="CentraleSupélec" />
+  <img src="LogoCS.png" height="120" alt="CentraleSupélec" />
   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-  <img src="images/cea.png" height="120" alt="CEA" />
+  <img src="cea.png" height="120" alt="CEA" />
 </p>
 
 <br />
