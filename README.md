@@ -55,9 +55,9 @@
 This repository studies **causal discovery in physical time-series data**. The project has two complementary objectives:
 
 1. Benchmark the **PCMCI algorithmic family** on a real wind-tunnel system with a known causal structure.
-2. Extend the **Causal Relevance Index (CRI)** from static graphs to lagged time-series graphs, obtaining **CRI\(_{TS}\)**, and evaluate whether it behaves as predicted by the theory.
+2. Extend the **Causal Relevance Index (CRI)** from static graphs to lagged time-series graphs, obtaining **$CRI\_{TS}\$**, and evaluate whether it behaves as predicted by the theory.
 
-The main report contains the complete scientific discussion and the mathematical demonstrations. This README is a practical guide to the repository: it explains what was done, how the files relate to each other, how to run the code, and how the CRI\(_{TS}\) notebook empirically validates the theoretical results.
+The main report contains the complete scientific discussion and the mathematical demonstrations. This README is a practical guide to the repository: it explains what was done, how the files relate to each other, how to run the code, and how the $CRI\_{TS}\$ notebook empirically validates the theoretical results.
 
 > **Important distinction:** the report provides the mathematical proofs. The code provides an empirical validation of the theoretical predictions on the CausalChamber dataset. Numerical experiments support the theory; they do not replace the proofs.
 
