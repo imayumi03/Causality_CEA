@@ -7,9 +7,9 @@
 <br />
 
 <p align="center">
-  <img src="images/LogoCS.png" height="120" alt="CentraleSupélec" />
+  <img src="LogoCS.png" height="120" alt="CentraleSupélec" />
   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-  <img src="images/cea.png" height="120" alt="CEA" />
+  <img src="cea.png" height="120" alt="CEA" />
 </p>
 
 <br />
