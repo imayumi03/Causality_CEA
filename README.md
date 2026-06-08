@@ -640,4 +640,4 @@ The report contains the complete bibliography. The central references for unders
 5. Ibragimov and Ibragimov–Linnik, limit theorems for stationary and mixing sequences.
 6. Benjamini and Yekutieli, false-discovery-rate control under dependency.
 
-For the full theoretical derivation, experimental discussion, and bibliography, read [`LABPROJECT_Report.pdf`](./LABPROJECT_Report.pdf).
+For the full theoretical derivation, experimental discussion, and bibliography, contact the author.
