@@ -27,7 +27,7 @@
   <table>
       <td></td>
       <td><i>Mounia ABDELMOUMNI</i></td>
-      <td><a href="mailto:mounia.abdelmoumni@student-cs.fr">mounia.abdelmoumni@student-cs.fr</a></td>
+      <td><a href="mailto:mabdelmoumni03@gmail.com">mabdelmoumni03@gmail.com</a></td>
     </tr>
     <tr>
       <td align="right"><b>Supervisor:</b></td>
