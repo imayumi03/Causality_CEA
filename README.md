@@ -50,7 +50,7 @@
 <br />
 
 
-## Comparative benchmark and CRI\(_{TS}\) extension on the CausalChamber wind tunnel
+## Comparative benchmark and $CRI\_{TS}\$ extension on the CausalChamber wind tunnel
 
 This repository studies **causal discovery in physical time-series data**. The project has two complementary objectives:
 
@@ -70,8 +70,8 @@ The main report contains the complete scientific discussion and the mathematical
 3. [Main contributions](#3-main-contributions)
 4. [Repository structure](#4-repository-structure)
 5. [Benchmarking causal discovery on CausalChamber](#5-benchmarking-causal-discovery-on-causalchamber)
-6. [Focus: the CRI\(_{TS}\) contribution](#6-focus-the-crits-contribution)
-7. [How the notebook validates the CRI\(_{TS}\) theory](#7-how-the-notebook-validates-the-crits-theory)
+6. [Focus: the $CRI\_{TS}\$ contribution](#6-focus-the-crits-contribution)
+7. [How the notebook validates the $CRI\_{TS}\$ theory](#7-how-the-notebook-validates-the-crits-theory)
 8. [Installation](#8-installation)
 9. [How to run the project](#9-how-to-run-the-project)
 10. [Generated outputs](#10-generated-outputs)
@@ -124,14 +124,14 @@ The scripts evaluate the learned causal graphs using strict and relaxed protocol
 
 ### 3.2 Extension of CRI to time-series graphs
 
-The CRI workstream extends the static Causal Relevance Index to **directed, lag-indexed candidate edges**. The extension is denoted **CRI\(_{TS}\)**.
+The CRI workstream extends the static Causal Relevance Index to **directed, lag-indexed candidate edges**. The extension is denoted **$CRI\_{TS}\$**.
 
 The report contains the theoretical development. In particular, it explains:
 
 - how the static framework is adapted to time-series graphs;
 - why the original i.i.d. assumption can be replaced by stationarity and mixing assumptions;
-- why correlations among p-values do not invalidate CRI\(_{TS}\);
-- why CRI\(_{TS}\) remains useful when Type-II errors occur;
+- why correlations among p-values do not invalidate $CRI\_{TS}\$;
+- why $CRI\_{TS}\$ remains useful when Type-II errors occur;
 - which conditional-independence tests have a theoretical super-uniformity guarantee in the proposed setting.
 
 The notebook then evaluates the predictions of this theory on the CausalChamber wind-tunnel data.
@@ -142,10 +142,10 @@ The notebook then evaluates the predictions of this theory on the CausalChamber 
 
 | File | Purpose |
 |---|---|
-| `LABPROJECT_Report.pdf` | Complete report: motivation, benchmark, CRI\(_{TS}\) definition, theoretical demonstrations, results, and appendices. |
+| `LABPROJECT_Report.pdf` | Complete report: motivation, benchmark, $CRI\_{TS}\$ definition, theoretical demonstrations, results, and appendices. |
 | `causalchamber_better.py` | Main benchmark script. Compares PCMCI and PCMCI+ with RobustParCorr and CMIknn. Evaluates both strict lag-specific recovery and a lag-collapsed representation. |
 | `causalchamber_undirected.py` | Complementary benchmark script. Compares directed and undirected evaluation to quantify the effect of direction and lag ambiguity. |
-| `CRI_experiment.ipynb` | Notebook dedicated to the CRI\(_{TS}\) workstream: data loading, diagnostics, stationarity analysis, PCMCI+ runs with several CI tests, CRI\(_{TS}\) calculation, plots, and empirical validation. |
+| `CRI_experiment.ipynb` | Notebook dedicated to the $CRI\_{TS}\$ workstream: data loading, diagnostics, stationarity analysis, PCMCI+ runs with several CI tests, $CRI\_{TS}\$ calculation, plots, and empirical validation. |
 | `data/` | Created by the notebook. Stores the downloaded CausalChamber dataset. |
 | `outputs/` | Created by the notebook. Stores generated plots. |
 | `results/` | Created by the notebook. Stores comparison tables such as CSV summaries. |
@@ -153,7 +153,7 @@ The notebook then evaluates the predictions of this theory on the CausalChamber 
 The two Python scripts and the CRI notebook answer related but distinct questions:
 
 - The **benchmark scripts** focus on comparing causal-discovery algorithms and evaluation protocols.
-- The **CRI notebook** focuses on the behavior of CRI\(_{TS}\) and its relationship with the theoretical results derived in the report.
+- The **CRI notebook** focuses on the behavior of $CRI\_{TS}\$ and its relationship with the theoretical results derived in the report.
 
 ---
 
@@ -268,7 +268,7 @@ The time-series Causal Relevance Index is:
 
 A higher score indicates that the method assigns stronger statistical evidence to causal structure. However, CRI\(_{TS}\) should primarily be used **to compare methods or configurations**, not as a universal accuracy score.
 
-### 6.5 Why CRI\(_{TS}\) does not generally reach 1
+### 6.5 Why $CRI\_{TS}\$ does not generally reach 1
 
 In a sparse graph, most candidate edges are absent. Under the null hypothesis, valid p-values have an expected value of at least `0.5`. Therefore, absent edges contribute a non-zero baseline to the average.
 
@@ -278,7 +278,7 @@ If `s` denotes the edge density, the theoretical sparsity-dependent ceiling is:
 \mathrm{CRI}^{\max}_{TS} = \frac{1+s}{2}.
 ```
 
-This is why an absolute CRI\(_{TS}\) value must be interpreted in the context of graph sparsity.
+This is why an absolute $CRI\_{TS}\$ value must be interpreted in the context of graph sparsity.
 
 ### 6.6 The theoretical results established in the report
 
@@ -311,11 +311,11 @@ The report provides theoretical demonstrations for:
 
 CMIknn is included as an empirical comparison, but the report does **not** claim the same formal super-uniformity guarantee for CMIknn under temporal dependence.
 
-#### C. Why correlated p-values are not a problem for CRI\(_{TS}\)
+#### C. Why correlated p-values are not a problem for $CRI\_{TS}\$
 
-P-values calculated from the same time series are generally correlated. The report shows that this does not invalidate CRI\(_{TS}\), because CRI\(_{TS}\) is an average and its guarantees rely on **linearity of expectation**, not on independence among p-values.
+P-values calculated from the same time series are generally correlated. The report shows that this does not invalidate $CRI\_{TS}\$, because $CRI\_{TS}\$ is an average and its guarantees rely on **linearity of expectation**, not on independence among p-values.
 
-#### D. Why CRI\(_{TS}\) remains useful with Type-II errors
+#### D. Why $CRI\_{TS}\$ remains useful with Type-II errors
 
 A Type-II error occurs when a true causal edge is missed. This is common in real time-series data.
 
@@ -323,9 +323,9 @@ The report proves that CRI\(_{TS}\) remains a meaningful plausibility and rankin
 
 ---
 
-## 7. How the notebook validates the CRI\(_{TS}\) theory
+## 7. How the notebook validates the $CRI\_{TS}\$ theory
 
-The notebook `CRI_experiment.ipynb` implements the empirical CRI\(_{TS}\) analysis.
+The notebook `CRI_experiment.ipynb` implements the empirical $CRI\_{TS}\$ analysis.
 
 ### 7.1 Dataset and selected variables
 
@@ -371,7 +371,7 @@ Before running causal discovery, the notebook explores:
 - first-order differencing strategies;
 - optional downsampling experiments.
 
-These diagnostics are important because the CRI\(_{TS}\) theory is derived under stationarity assumptions and because physical sensor dynamics can be slow relative to the sampling rate.
+These diagnostics are important because the $CRI\_{TS}\$ theory is derived under stationarity assumptions and because physical sensor dynamics can be slow relative to the sampling rate.
 
 ### 7.3 PCMCI+ configurations
 
@@ -396,7 +396,7 @@ The implementation extracts the returned lagged p-values from the PCMCI+ p-value
 cri = 1.0 - pvalues.mean()
 ```
 
-This is the practical notebook implementation of the CRI\(_{TS}\) graph-level aggregation.
+This is the practical notebook implementation of the $CRI\_{TS}\$ graph-level aggregation.
 
 ### 7.4 Validation 1: absent-edge p-values follow the expected null behavior
 
@@ -404,7 +404,7 @@ The notebook separates p-values associated with true and absent edges and plots 
 
 The report states that absent-edge p-values have means above the `0.5` null baseline for the three tested CI methods, while true-edge p-values are lower on average. This is consistent with the expected null behavior derived in the theory.
 
-### 7.5 Validation 2: CRI\(_{TS}\) provides a threshold-free method ranking
+### 7.5 Validation 2: $CRI\_{TS}\$ provides a threshold-free method ranking
 
 The notebook compares the three CI tests and obtains the following reported values:
 
@@ -414,19 +414,19 @@ The notebook compares the three CI tests and obtains the following reported valu
 | GPDC | 0.381 | 0.333 | 0.400 | 0.364 | 0.667 | 2 / 4 / 3 | 52 min |
 | CMIknn | 0.263 | 1.000 | 0.200 | 0.333 | 0.000 | 1 / 0 / 4 | 29 min |
 
-The CRI\(_{TS}\) ranking is:
+The $CRI\_{TS}\$ ranking is:
 
 ```text
 GPDC > RobustParCorr > CMIknn
 ```
 
-This result illustrates the purpose of CRI\(_{TS}\): **GPDC receives the highest CRI\(_{TS}\)** because it assigns stronger statistical evidence to the causal edges it identifies, even though **RobustParCorr receives the best F1-score**. CRI\(_{TS}\) and F1 measure complementary aspects of the result.
+This result illustrates the purpose of $CRI\_{TS}\$: **GPDC receives the highest CRI\(_{TS}\)** because it assigns stronger statistical evidence to the causal edges it identifies, even though **RobustParCorr receives the best F1-score**. CRI\(_{TS}\) and F1 measure complementary aspects of the result.
 
 The notebook also sweeps the significance threshold `alpha` and shows that threshold-dependent metrics such as F1 and SHD can change when the threshold changes. CRI\(_{TS}\) uses raw p-values directly and does not require selecting a decision threshold first.
 
-### 7.6 Validation 3: CRI\(_{TS}\) tracks causal-discovery power
+### 7.6 Validation 3: $CRI\_{TS}\$ tracks causal-discovery power
 
-The notebook studies the relationship between CRI\(_{TS}\) and the true-positive rate (TPR) across sample-size experiments using RobustParCorr.
+The notebook studies the relationship between $CRI\_{TS}\$ and the true-positive rate (TPR) across sample-size experiments using RobustParCorr.
 
 The report gives a Pearson correlation of:
 
@@ -434,16 +434,16 @@ The report gives a Pearson correlation of:
 r = 0.956
 ```
 
-This supports the theoretical result that CRI\(_{TS}\) remains useful as a ranking criterion even when Type-II errors occur.
+This supports the theoretical result that $CRI\_{TS}\$ remains useful as a ranking criterion even when Type-II errors occur.
 
 ### 7.7 What the code validates, precisely
 
 The notebook empirically checks the main predictions derived in the report:
 
 1. **Null behavior:** absent-edge p-values are concentrated around or above the theoretical null baseline.
-2. **Ranking behavior:** CRI\(_{TS}\) distinguishes CI tests according to the strength of their statistical evidence.
-3. **Power tracking:** CRI\(_{TS}\) co-evolves with TPR across the tested configurations.
-4. **Threshold independence:** CRI\(_{TS}\) can be computed without fixing the final edge-selection threshold `alpha`.
+2. **Ranking behavior:** $CRI\_{TS}\$ distinguishes CI tests according to the strength of their statistical evidence.
+3. **Power tracking:** $CRI\_{TS}\$ co-evolves with TPR across the tested configurations.
+4. **Threshold independence:** $CRI\_{TS}\$ can be computed without fixing the final edge-selection threshold `alpha`.
 
 The proofs themselves remain in the report. The notebook is the experimental counterpart of those proofs.
 
